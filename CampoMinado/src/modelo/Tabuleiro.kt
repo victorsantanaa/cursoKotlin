@@ -62,7 +62,7 @@ class Tabuleiro (val qtDeLinhas: Int, val qtDeColunas: Int, private val qtDeMina
 
     private fun objetivoAlcancado(): Boolean {
         var jogadorGanhou = true
-        forEachCampo { if (!it.objetivoAlcancado) jogadorGanhou = true }
+        forEachCampo { if (!it.objetivoAlcancado) jogadorGanhou = false }
         return jogadorGanhou
     }
 
